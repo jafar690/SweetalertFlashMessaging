@@ -1,13 +1,13 @@
 {
-    "name": "jafar690/sweetalert-flash-messaging",
+    "name": "jafar690/SweetalertFlashMessaging",
     "type": "library",
     "description": "Easy Flash notifications with sweetalert",
     "license": "MIT",
     "keywords": [
         "jafar690",
-        "sweetalert-flash-messaging"
+        "SweetalertFlashMessaging"
     ],
-    "homepage": "https://github.com/jafar690/sweetalert-flash-messaging",
+    "homepage": "https://github.com/jafar690/SweetalertFlashMessaging",
     "license": "MIT",
     "authors": [
         {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "jafar690\\sweetalert-flash-messaging\\": "src"
+            "jafar690\\SweetalertFlashMessaging\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "jafar690\\sweetalert-flash-messaging\\": "tests"
+            "jafar690\\SweetalertFlashMessaging\\": "tests"
         }
     },
     "scripts": {
