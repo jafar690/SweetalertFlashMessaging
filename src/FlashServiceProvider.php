@@ -20,14 +20,7 @@ class FlashServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(
-            'jafar690\SweetalertFlashMessaging\SessionStore',
-            'jafar690\SweetalertFlashMessaging\LaravelSessionStore'
-        );
 
-        $this->app->singleton('flash', function () {
-            return $this->app->make('jafar690\SweetalertFlashMessaging\FlashNotifier');
-        });
     }
 
     /**
@@ -37,6 +30,13 @@ class FlashServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            'jafar690\SweetalertFlashMessaging\SessionStore',
+            'jafar690\SweetalertFlashMessaging\LaravelSessionStore'
+        );
+
+        $this->app->singleton('flash', function () {
+            return $this->app->make('jafar690\SweetalertFlashMessaging\FlashNotifier');
+        });
     }
 }

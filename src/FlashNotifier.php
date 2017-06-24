@@ -35,9 +35,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function info($message = null)
+    public function info($title, $message = null)
     {
-        return $this->message($message, 'info');
+        return $this->message($title, $message, 'info');
     }
 
     /**
@@ -46,9 +46,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function success($message = null)
+    public function success($title, $message = null)
     {
-        return $this->message($message, 'success');
+        return $this->message($title, $message, 'success');
     }
 
     /**
@@ -57,9 +57,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function error($message = null)
+    public function error($title, $message = null)
     {
-        return $this->message($message, 'danger');
+        return $this->message($title, $message, 'error');
     }
 
     /**
@@ -68,9 +68,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function warning($message = null)
+    public function warning($title, $message = null)
     {
-        return $this->message($message, 'warning');
+        return $this->message($title,$message, 'warning');
     }
 
     /**
@@ -80,7 +80,7 @@ class FlashNotifier
      * @param  string|null $level
      * @return $this
      */
-    public function message($message = null, $level = null)
+    public function message($title = null, $message = null, $level = null)
     {
         // If no message was provided, we should update
         // the most recently added message.
@@ -89,7 +89,7 @@ class FlashNotifier
         }
 
         if (! $message instanceof Message) {
-            $message = new Message(compact('message', 'level'));
+            $message = new Message(compact('title','message', 'level'));
         }
 
         $this->messages->push($message);

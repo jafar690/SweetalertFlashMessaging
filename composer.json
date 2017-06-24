@@ -11,9 +11,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": ":Benjamin Gakami",
-            "email": ":hello@bengakami.me",
-            "homepage": ":bengakami.me",
+            "name": "Benjamin Gakami",
+            "email": "hello@bengakami.me",
+            "homepage": "https://bengakami.me",
             "role": "Developer"
         }
     ],
@@ -27,7 +27,10 @@
     "autoload": {
         "psr-4": {
             "jafar690\\SweetalertFlashMessaging\\": "src"
-        }
+        },
+        "files": [
+             "src/Laracasts/Flash/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
