@@ -8,7 +8,6 @@
         "SweetalertFlashMessaging"
     ],
     "homepage": "https://github.com/jafar690/SweetalertFlashMessaging",
-    "license": "MIT",
     "authors": [
         {
             "name": "Benjamin Gakami",
@@ -27,10 +26,7 @@
     "autoload": {
         "psr-4": {
             "jafar690\\SweetalertFlashMessaging\\": "src"
-        },
-        "files": [
-             "src/Laracasts/Flash/functions.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
